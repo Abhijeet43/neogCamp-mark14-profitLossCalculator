@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profit or Loss Calculator</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Profit or Loss Calculator</h1>
+      </header>
+      <main>
+        <label for="initial-value"
+          >Initial Price
+          <input
+            type="number"
+            id="initial-value"
+            placeholder="₹"
+            min="1"
+            required
+          />
+        </label>
+        <label for="quantity"
+          >Quantity
+          <input type="number" id="quantity" min="1" value="1" required />
+        </label>
+        <label for="current-value"
+          >Current Price
+          <input
+            type="number"
+            id="current-value"
+            placeholder="₹"
+            min="1"
+            required
+          />
+        </label>
+        <button id="btn-tell">Tell!!</button>
+        <button id="btn-reset">Reset</button>
+        <div id="output-box"></div>
+      </main>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
