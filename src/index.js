@@ -21,15 +21,21 @@ function reset() {
 
 function calculateProfitorLoss(initialValue, quantity, currentValue) {
   if (initialValue < currentValue) {
-    const profit = currentValue - initialValue;
-    const profitPercentage = (profit / initialValue) * 100;
+    const profit = ((currentValue - initialValue) * quantity).toFixed(2);
+    const profitPercentage = (
+      ((currentValue - initialValue) * 100) /
+      initialValue
+    ).toFixed(2);
     showMessage(
       `Profit is Rs ${profit} and Profit percentage is ${profitPercentage}%`,
       "green"
     );
   } else if (initialValue > currentValue) {
-    const loss = initialValue - currentValue;
-    const lossPercentage = (loss / initialValue) * 100;
+    const loss = ((initialValue - currentValue) * quantity).toFixed(2);
+    const lossPercentage = (
+      ((initialValue - currentValue) * 100) /
+      initialValue
+    ).toFixed(2);
     showMessage(
       `Loss is Rs ${loss} and Loss percentage is ${lossPercentage}%`,
       "red"
@@ -40,9 +46,9 @@ function calculateProfitorLoss(initialValue, quantity, currentValue) {
 }
 
 tellBtn.addEventListener("click", function () {
-  const initialValue = initialValueEl.value;
-  const quantity = quantityEl.value;
-  const currentValue = currentValueEl.value;
+  const initialValue = Number(initialValueEl.value);
+  const quantity = Number(quantityEl.value);
+  const currentValue = Number(currentValueEl.value);
 
   if (initialValue && quantity && currentValue) {
     if (initialValue <= 0 || currentValue <= 0) {
