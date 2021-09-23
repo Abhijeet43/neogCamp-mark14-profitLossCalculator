@@ -27,7 +27,7 @@ function calculateProfitorLoss(initialValue, quantity, currentValue) {
       initialValue
     ).toFixed(2);
     showMessage(
-      `Profit is Rs ${profit} and Profit percentage is ${profitPercentage}%`,
+      `Profit is ₹ ${profit} and Profit percentage is ${profitPercentage}%`,
       "green"
     );
   } else if (initialValue > currentValue) {
@@ -37,7 +37,7 @@ function calculateProfitorLoss(initialValue, quantity, currentValue) {
       initialValue
     ).toFixed(2);
     showMessage(
-      `Loss is Rs ${loss} and Loss percentage is ${lossPercentage}%`,
+      `Loss is ₹ ${loss} and Loss percentage is ${lossPercentage}%`,
       "red"
     );
   } else {
